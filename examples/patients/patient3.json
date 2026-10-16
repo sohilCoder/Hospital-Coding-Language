@@ -1,0 +1,6 @@
+{
+  "name": "Patient 1003",
+  "labs": {"potassium": 4.1, "sodium": 140, "creatinine": 0.9, "a1c": 8.4},
+  "meds": ["insulin"],
+  "diagnoses": ["diabetes"]
+}

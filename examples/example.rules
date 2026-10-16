@@ -1,0 +1,26 @@
+# Clinical alert rules. Lines starting with # are comments.
+
+rule "High potassium on ACE inhibitor"
+  severity high
+  when lab potassium > 5.5 and taking class ACE_INHIBITOR
+  alert "Potassium is high while on an ACE inhibitor. Consider holding it and rechecking."
+
+rule "Bleeding risk: anticoagulant with NSAID"
+  severity high
+  when taking class ANTICOAGULANT and taking class NSAID
+  alert "Anticoagulant plus NSAID raises bleeding risk. Consider acetaminophen for pain."
+
+rule "Metformin with reduced kidney function"
+  severity medium
+  when taking drug metformin and (has ckd or lab creatinine > 1.5)
+  alert "Review the metformin dose for kidney function."
+
+rule "Low sodium"
+  severity medium
+  when lab sodium < 130
+  alert "Sodium is low. Recheck and review fluids and medications."
+
+rule "Diabetes without metformin"
+  severity low
+  when has diabetes and not taking drug metformin and not has ckd
+  alert "Diabetes without metformin. Consider whether it is appropriate."

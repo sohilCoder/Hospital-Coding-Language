@@ -1,0 +1,27 @@
+# Rules with misspelled names, to show the "did you mean" suggestions.
+# Try: python rules.py check examples/mistakes.rules
+
+rule "Misspelled lab"
+  severity high
+  when lab potasium > 5.5
+  alert "Potassium is high."
+
+rule "Wrong capitals"
+  severity medium
+  when taking class ace_inhibitor
+  alert "On an ACE inhibitor."
+
+rule "Drug written as a class"
+  severity medium
+  when taking class warfarin
+  alert "On warfarin."
+
+rule "Misspelled drug and diagnosis"
+  severity low
+  when has diabetis and not taking drug metformn
+  alert "Diabetic, not on metformin."
+
+rule "Misspelled lab"
+  severity low
+  when lab sodium < 130
+  alert "This rule name is used twice."

@@ -1,0 +1,6 @@
+{
+  "name": "Patient 1001",
+  "labs": {"potassium": 5.9, "sodium": 138, "creatinine": 1.1},
+  "meds": ["lisinopril", "warfarin", "ibuprofen"],
+  "diagnoses": ["hypertension", "atrial_fibrillation"]
+}
