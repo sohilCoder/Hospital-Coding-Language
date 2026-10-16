@@ -1,7 +1,7 @@
 small programming language for hopistals which give alert rules. written in python.
 lets clinicians write safety alerts in plain readable rules instead of code.
 
-example of a rule (all rules have a name, serverity, condition, and alert message):
+example of a rule (all rules have a name, serverity, condition, and alert message):\n
 rule "High potassium on ACE inhibitor"
   severity high
   when lab potassium > 5.5 and taking class ACE_INHIBITOR
